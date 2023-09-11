@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix-like Homepage</title>
+    <style>
+        body, h1, h2, p {
+            margin: 10px;
+            padding: 10px;
+        }
+
+        /* Apply basic styles */
+        body {
+            font-family: Times New Roman, sans-serif;
+        }
+
+        header {
+            background-color: #141414;
+            color: white;
+            padding: 20px;
+        }
+
+        .logo img {
+            width: 120px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 70px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #e50914;
+        }
+
+        .hero {
+            background-image: url('hero-background.jpg');
+            background-size: cover;
+            text-align: center;
+            padding: 150px 0;
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .cta-button {
+            background-color: #e50914;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .featured {
+            padding: 40px;
+        }
+
+        .featured-content {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #141414;
+            color: white;
+        }
+
+        /* Additional styling */
+        .featured-content {
+            margin-top: 40px;
+        }
+
+        .content-card {
+            background-color: #f4f4f4;
+            border-radius: 5px;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .content-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .content-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .content-card h3 {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+
+        /* Media queries */
+        @media screen and (max-width: 768px) {
+            .nav-links {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .cta-button {
+                font-size: 16px;
+                padding: 8px 16px;
+            }
+
+            .featured-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .hero-content {
+                padding: 100px 0;
+            }
+
+            .cta-button {
+                font-size: 14px;
+                padding: 6px 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="https://images.ctfassets.net/4cd45et68cgf/5y7i4snzpqkr2oHRCRAkN4/0dc96e1e8502de542fc5493d946fd5c6/Android_Collage_1920x1080_EMEA_DACH_DE.jpg" alt="Netflix Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">TV Shows</a></li>
+                <li><a href="#">Movies</a></li>
+                <li><a href="#">New & Popular</a></li>
+                <li><a href="#">My List</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="Prabhas">
+        <div class="hero-content">
+            <h1>Unlimited Movies, TV Shows, and More.</h1>
+            <p>Watch anywhere. Cancel anytime.</p>
+            <button class="cta-button">Start Watching</button>
+        </div>
+    </section>
+
+    <section class="featured">
+        <h2>Featured Content</h2>
+        <div class="featured-content">
+            <!-- Content cards go here -->
+            <div class="content-card">
+                <img src="https://hips.hearstapps.com/hmg-prod/images/best-movies-on-netflix-right-now-the-adam-project-644053ba6404a.jpeg" alt="The Adam Project">
+                <h3>The Adam Project</h3>
+            </div>
+            <div class="content-card">
+                <img src="https://qph.cf2.quoracdn.net/main-qimg-20c7c7249923d6019c84fbb039e8d4de-lq" alt="Movie 2">
+                <h3>The Gray Man</h3>
+            </div>
+            <div class="content-card">
+                <img src="https://resizing.flixster.com/bOEHoxe8FnTy1QNnpUliaxj6gKE=/ems.cHJkLWVtcy1hc3NldHMvdHZzZXJpZXMvZDZkZTdjNWYtMTJmMy00ZjJjLWE5MDQtYzdkNDA2ZjUwNzQzLmpwZw==" alt="TV Show 1">
+                <h3>Ginny and Georgia</h3>
+            </div>
+            <div class="content-card">
+                <img src="https://images.justwatch.com/poster/305216489/s718/tale-of-the-nine-tailed.%7Bformat%7D" alt="TV Show 2">
+                <h3>The Tale Of The Nine-Tailed</h3>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Netflix-like Website. All rights reserved.</p>
+    </footer>
+</body>
+</html>
